@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Companhia de Água</title>
+</head>
+<body>
+    <h1>Consumo de Água</h1>
+    Seu Consumo mensal foi de <input type="number" name="txta" id="txta"> Litros de Água.
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+    <script>
+        function calcular() {
+            var txta = window.document.querySelector('input#txta')
+            var res = window.document.querySelector('div#res')
+            var txta = Number(txta.value)
+            res.innerHTML = `<p>Seu consumo foi de <strong>${txta}</strong> litros</p>`
+            if (50 > txta) {
+                res.innerHTML += `<p>Seu consumo foi <strong>abaixo</strong> do esperado</p>`
+            } else {
+                res.innerHTML += `<p>Você <strong>excedeu seu limite mensal</strong></p>`
+            }
+        }
+    </script>
+</body>
+</html>

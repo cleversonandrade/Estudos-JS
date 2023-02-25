@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motos e CIA</title>
+</head>
+<body>
+    <h1>Sua moto nova está aqui!</h1>
+    Qual a marca desejada <input type="text" name="txtm" id="txtm"> ?
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function calcular() {
+            txtm = window.document.querySelector('input#txtm')
+            res = window.document.querySelector('div#res')
+            var moto = (txtm . value)
+            res.innerHTML = `A marca ${moto}`
+            if (moto == 'Honda') {
+                res.innerHTML += `<p>Sua moto é CB 300</p>`
+            } else {
+                res.innerHTML += `<p>Sua moto não é CB 300</p>`
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            font-size: 18px;
+            padding: 2em;
+        }
+        div {
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Departamento Nacional</h1>
+    Qual seu País <input type="text" name="txtp" id="txtp"> ?
+    <input type="button" value="Verificar" onclick="identificar()">
+    <div id="res">
+
+    </div>
+    <script>
+       function identificar() {
+        var txtp = window.document.querySelector('input#txtp') 
+        var res = window.document.querySelector('div#res')
+        var país = (txtp . value)
+        res.innerHTML = `Vivendo em <strong>${país}</strong>`
+            if (país != 'Brasil') {
+                res.innerHTML += `<p>Você é <strong>Estrangeiro</strong></p>`
+            } else {
+                res.innerHTML += `<p>Você é <strong>Brasileiro</strong></p>`
+            }
+    }
+    </script>
+</body>
+</html>

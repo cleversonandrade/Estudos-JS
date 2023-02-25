@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campeonato Estadual</title>
+</head>
+<style>
+    body {
+        font: normal 18pt Arial;
+        padding: 1em;
+    }
+    div {
+        padding: 1em;
+    }
+</style>
+<body>
+    <h1>Final do campeonato Estadual</h1>
+    Qual time será campeão <input type="text" name="txtc" id="txtc"> ?
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function calcular() {
+            txtc = window.document.querySelector('input#txtc')
+            var res = window.document.querySelector('div#res')
+            var campeão = (txtc . value)
+            res.innerHTML = `Você é <strong>${campeão}</strong>`
+            if (campeão == 'Vasco') {
+                res.innerHTML += `<strong><p>Você é Campeão</P></strong>`
+            } else {
+                res.innerHTML += `<strong><p>Você nâo é Campeão</p></strong>`
+            }
+            
+        }
+    </script>
+</body>
+</html>

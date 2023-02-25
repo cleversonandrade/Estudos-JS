@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concessionária</title>
+</head>
+<style>
+    body {
+        font: normal 20px Arial;
+        padding: 1em;
+    }
+    div {
+        padding: 1em;
+    }
+</style>
+<body>
+    <h1>Venda de Veículos</h1>
+    Como podemos te atender hoje <input type="text" name="txtc" id="txtc"> ?
+    <input type="button" value="Verificar" onclick="identificar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function identificar() {
+        var txtc = window.document.querySelector('input#txtc')
+        var res = window.document.querySelector('div#res')
+        var car = (txtc . value)
+        res.innerHTML = `Seu Veículo é um ${car}`
+       if (car == 'Ford') { 
+            res.innerHTML += `<p>Seu veículo  é um Sedã</p>`
+       } else {
+            res.innerHTML += `<p>Seu Veículo não é um Sedã</p>`
+       }
+    }
+    </script>
+</body>
+</html>
